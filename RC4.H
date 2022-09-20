@@ -1,5 +1,7 @@
 #pragma once
+#if _MSC_VER
 #define RC4API __declspec(dllexport)
+#endif
 
 /// <summary>
 /// 初始化RC4加解密资源空间
