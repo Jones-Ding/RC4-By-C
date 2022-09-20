@@ -73,5 +73,6 @@ char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize) {
 		//String.fromCharCode(src.charCodeAt(i) ^ sbox[c]);
 	}
 
+
 	return output;
 }
