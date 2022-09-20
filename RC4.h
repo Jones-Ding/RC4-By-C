@@ -1,5 +1,7 @@
 #pragma once
-#if _MSC_VER
+#if __GNUC__
+#define RC4API 
+#else
 #define RC4API __declspec(dllexport)
 #endif
 

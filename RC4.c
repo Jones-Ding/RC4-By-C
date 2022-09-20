@@ -69,10 +69,7 @@ char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize) {
 		sbox[b] = atoi(temp);
 		c = (sbox[a] + sbox[b]) % 256;
 		output[i] = src[i] ^ sbox[c];
-		//output[i] = src[i] ^ sbox[c];
-		//String.fromCharCode(src.charCodeAt(i) ^ sbox[c]);
 	}
-
-
+	
 	return output;
 }
