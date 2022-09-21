@@ -3,6 +3,8 @@
 #include <assert.h>
 #include "RC4.h"
 
+
+
 char* _itoa(int value, char* str, int radix) {
 	static char dig[] =
 		"0123456789"
