@@ -363,7 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 #banVisualStudio config document
-RC4 By C.sln
-RC4 By C.vcxproj
-RC4 By C.vcxproj.user
-RC4 By C.vcxproj.filters
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
