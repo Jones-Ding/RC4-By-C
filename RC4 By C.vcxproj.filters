@@ -18,6 +18,9 @@
     <ClCompile Include="RC4.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="typeConvertion_Linux.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RC4.h">

@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="RC4.c" />
+    <ClCompile Include="typeConvertion_Linux.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RC4.h" />

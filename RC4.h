@@ -5,6 +5,12 @@
 #define RC4API __declspec(dllexport)
 #endif
 
+#if __linux__
+char* _itoa(int value, char* str, int radix);
+int atoi(const char* str);
+#endif
+
+
 /// <summary>
 /// 初始化RC4加解密资源空间
 /// </summary>
