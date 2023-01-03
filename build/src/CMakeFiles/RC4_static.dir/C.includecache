@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/RC4.h
+
+/home/dean/documents/RC4-By-C/src/RC4.c
+RC4.h
+/home/dean/documents/RC4-By-C/src/RC4.h
+stdio.h
+-
+stdlib.h
+-
+malloc.h
+-
+
+/home/dean/documents/RC4-By-C/src/typeConvertion_Linux.c
+stdio.h
+-
+assert.h
+-
+RC4.h
+/home/dean/documents/RC4-By-C/src/RC4.h
+
