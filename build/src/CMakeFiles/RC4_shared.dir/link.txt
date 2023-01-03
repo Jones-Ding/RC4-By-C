@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC   -shared -Wl,-soname,librc4encrypt.so -o ../../lib/librc4encrypt.so CMakeFiles/RC4_shared.dir/RC4.c.o CMakeFiles/RC4_shared.dir/typeConvertion_Linux.c.o 
