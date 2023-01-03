@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/librc4encrypt.a  CMakeFiles/RC4_static.dir/RC4.c.o CMakeFiles/RC4_static.dir/typeConvertion_Linux.c.o
+/usr/bin/ranlib ../../lib/librc4encrypt.a

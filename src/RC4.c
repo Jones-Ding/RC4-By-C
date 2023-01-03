@@ -1,4 +1,3 @@
-#define _CRT_SECURE_NO_WARNINGS 1
 #include "RC4.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,7 +11,6 @@ unsigned char
 	* sbox = NULL;
 
 void initializationRC4(int srcSize, int pwdSize) {
-	//定义
 	int size = srcSize;
 	if (size == 0 || pwdSize == 0)
 		return;
@@ -45,7 +43,7 @@ char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize) {
 	if (IS_INIT == 0)
 		initializationRC4(srcSize, pwdSize);
 
-	//生成key和sbox
+	//generate key box
 	for (int i = 0; i < 256; i++) {
 		key[i] = (int)passwd[i % pwdSize];
 		sbox[i] = i;
@@ -59,7 +57,6 @@ char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize) {
 		sbox[j] = atoi(temp);
 	}
 
-	//加解密异或
 	int a = 0, b = 0, c = 0;
 	for (int i = 0; i < srcSize; i++) {
 		a = (a + 1) % 256;
