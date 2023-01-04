@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/dean/source/repos/RC4 By C/build/x64-debug/src/CMakeFiles/RC4_shared.dir/embed.manifest"

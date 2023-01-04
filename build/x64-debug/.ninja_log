@@ -1,0 +1,7 @@
+# ninja log v5
+8	190	6945180048506060	src/CMakeFiles/RC4_shared.dir/typeConvertion_Linux.c.obj	1bc7ad9a3015b96f
+3	192	6945180048536071	src/CMakeFiles/RC4_shared.dir/RC4.c.obj	ab336902627dc799
+1	447	6945205377487481	src/CMakeFiles/RC4_static.dir/RC4.c.obj	96957380eae163ef
+2	49	6945205608464905	C:/Users/dean/source/repos/RC4 By C/lib/rc4encrypt.lib	82acc2752ce39878
+1	169	6945209454442964	build.ninja	11a57df984030e15
+6	446	6945205377477475	src/CMakeFiles/RC4_static.dir/typeConvertion_Linux.c.obj	9f6104bf08078ea5
