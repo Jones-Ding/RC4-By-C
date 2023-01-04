@@ -362,8 +362,11 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-#banVisualStudio config document
+# banVisualStudio config document
 *.sln
 *.vcxproj
 *.vcxproj.user
 *.vcxproj.filters
+
+# build 
+build/
