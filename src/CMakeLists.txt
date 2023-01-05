@@ -11,3 +11,4 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 # set_target_properties (RC4_static PROPERTIES OUTPUT_NAME "rc4encrypt")
 add_library(RC4_shared SHARED ${SRC_LIST})
 set_target_properties (RC4_shared PROPERTIES OUTPUT_NAME "rc4encrypt")
+

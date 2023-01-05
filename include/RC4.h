@@ -25,7 +25,7 @@ RC4API void initializationRC4(int srcSize, int pwdSize);
 RC4API void freeRC4Source();
 
 /// <summary>
-/// get Output Stream
+/// Get output stream
 /// </summary>
 /// <returns>Pointerַ</returns>
 RC4API char* getOutputStreamPointer();
@@ -37,5 +37,5 @@ RC4API char* getOutputStreamPointer();
 /// <param name="srcSize">Source size</param>
 /// <param name="passwd">Key</param>
 /// <param name="pwdSize">Key Size</param>
-/// <returns>�������ַ</returns>
+/// <returns>Output stream</returns>
 RC4API char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize);
