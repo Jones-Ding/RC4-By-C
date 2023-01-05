@@ -1,6 +1,6 @@
 #pragma once
 #if __GNUC__
-#define RC4API 
+#define RC4API __attribute__((visibility("default")))
 #else
 #define RC4API __declspec(dllexport)
 #endif
@@ -12,30 +12,30 @@ int atoi(const char* str);
 
 
 /// <summary>
-/// ³õÊ¼»¯RC4¼Ó½âÃÜ×ÊÔ´¿Õ¼ä
+/// init RC4 source
 /// </summary>
 /// <param name="srcSize"></param>
 /// <param name="pwdSize"></param>
 RC4API void initializationRC4(int srcSize, int pwdSize);
 
 /// <summary>
-/// ÊÍ·ÅRC4Õ¼ÓÃµÄ¿Õ¼ä×ÊÔ´
+/// dispose RC4 source
 /// </summary>
 /// <returns></returns>
 RC4API void freeRC4Source();
 
 /// <summary>
-/// »ñÈ¡Êä³öÁ÷µØÖ·
+/// get Output Stream
 /// </summary>
-/// <returns>Êä³öÁ÷µØÖ·</returns>
+/// <returns>PointerÖ·</returns>
 RC4API char* getOutputStreamPointer();
 
 /// <summary>
-/// Ö´ĞĞRC4¼Ó½âÃÜÔËËã
+/// Encrypt RC4
 /// </summary>
-/// <param name="src">ÊäÈëÁ÷³õÊ¼Öµ(Hex)</param>
-/// <param name="srcSize">ÊäÈëÁ÷ËùÕ¼×Ö½Ú´óĞ¡</param>
-/// <param name="passwd">ÃÜÔ¿Öµ</param>
-/// <param name="pwdSize">ÃÜÔ¿ÖµËùÕ¼×Ö½Ú´óĞ¡</param>
-/// <returns>Êä³öÁ÷µØÖ·</returns>
+/// <param name="src">source(Hex)</param>
+/// <param name="srcSize">Source size</param>
+/// <param name="passwd">Key</param>
+/// <param name="pwdSize">Key Size</param>
+/// <returns>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·</returns>
 RC4API char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize);
