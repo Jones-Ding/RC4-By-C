@@ -370,3 +370,6 @@ FodyWeavers.xsd
 
 # build 
 build/*
+
+# bin
+bin/*
