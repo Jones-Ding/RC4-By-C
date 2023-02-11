@@ -14,11 +14,10 @@ void initializationRC4(int srcSize, int pwdSize)
 	if (size == 0 || pwdSize == 0)
 		return;
 
-	temp = malloc(128 * sizeof(char));
-
-	key = malloc(256 * sizeof(char));
-	sbox = malloc(256 * sizeof(char));
-	output = malloc(size * sizeof(char));
+	temp = (char *)malloc(128 * sizeof(char));
+	key = (char *)malloc(256 * sizeof(char));
+	sbox = (char *)malloc(256 * sizeof(char));
+	output = (char *)malloc(size * sizeof(char));
 	IS_INIT = 1;
 }
 
