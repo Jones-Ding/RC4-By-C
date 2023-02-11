@@ -1,25 +1,23 @@
 #include "RC4.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <malloc.h>
 
-short IS_INIT = 0;
-unsigned char
-	* temp = NULL,
-	* output = NULL,
-	* key = NULL,
-	* sbox = NULL;
+static char IS_INIT = 0;
+static unsigned char
+* temp = NULL,
+* output = NULL,
+* key = NULL,
+* sbox = NULL;
 
 void initializationRC4(int srcSize, int pwdSize) {
 	int size = srcSize;
 	if (size == 0 || pwdSize == 0)
 		return;
 
-	temp = calloc(128, sizeof(char));
+	temp = malloc(128 * sizeof(char));
 
-	key = calloc(256, sizeof(unsigned char));
-	sbox = calloc(256, sizeof(unsigned char));
-	output = calloc(size, sizeof(char));
+	key = malloc(256 * sizeof(char));
+	sbox = malloc(256 * sizeof(char));
+	output = malloc(size * sizeof(char));
 	IS_INIT = 1;
 }
 
@@ -67,6 +65,6 @@ char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize) {
 		c = (sbox[a] + sbox[b]) % 256;
 		output[i] = src[i] ^ sbox[c];
 	}
-	
+
 	return output;
 }
