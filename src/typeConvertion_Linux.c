@@ -1,4 +1,5 @@
 #if __linux__
+#include <stdio.h>
 #include <assert.h>
 
 

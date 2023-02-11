@@ -3,12 +3,13 @@
 
 static char IS_INIT = 0;
 static unsigned char
-* temp = NULL,
-* output = NULL,
-* key = NULL,
-* sbox = NULL;
+	*temp = NULL,
+	*output = NULL,
+	*key = NULL,
+	*sbox = NULL;
 
-void initializationRC4(int srcSize, int pwdSize) {
+void initializationRC4(int srcSize, int pwdSize)
+{
 	int size = srcSize;
 	if (size == 0 || pwdSize == 0)
 		return;
@@ -21,34 +22,39 @@ void initializationRC4(int srcSize, int pwdSize) {
 	IS_INIT = 1;
 }
 
-void freeRC4Source() {
+void freeRC4Source()
+{
 	if (IS_INIT == 0)
 		return;
 
-	free(key); key = NULL;
-	free(sbox);	sbox = NULL;
-	free(temp);	temp = NULL;
-	free(output); output = NULL;
+	free(key);key = NULL;
+	free(sbox);sbox = NULL;
+	free(temp);temp = NULL;
+	free(output);output = NULL;
 
 	IS_INIT = 0;
 }
 
-char* getOutputStreamPointer() {
+char *getOutputStreamPointer()
+{
 	return output;
 }
 
-char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize) {
+char *RC4_Encrypt(char *src, short srcSize, char *passwd, short pwdSize)
+{
 	if (IS_INIT == 0)
 		initializationRC4(srcSize, pwdSize);
 
-	//generate key box
-	for (int i = 0; i < 256; i++) {
+	// generate key box
+	for (int i = 0; i < 256; i++)
+	{
 		key[i] = (int)passwd[i % pwdSize];
 		sbox[i] = i;
 	}
 
 	int j = 0;
-	for (int i = 0; i < 256; i++) {
+	for (int i = 0; i < 256; i++)
+	{
 		j = (j + sbox[i] + key[i]) % 256;
 		_itoa(sbox[i], temp, 10);
 		sbox[i] = sbox[j];
@@ -56,7 +62,8 @@ char* RC4_Encrypt(char* src, short srcSize, char* passwd, short pwdSize) {
 	}
 
 	int a = 0, b = 0, c = 0;
-	for (int i = 0; i < srcSize; i++) {
+	for (int i = 0; i < srcSize; i++)
+	{
 		a = (a + 1) % 256;
 		b = (b + sbox[a]) % 256;
 		_itoa(sbox[a], temp, 10);
