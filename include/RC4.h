@@ -12,14 +12,14 @@ int atoi(const char* str);
 
 
 /// <summary>
-/// init RC4 source
+/// Initalize RC4 source
 /// </summary>
 /// <param name="srcSize"></param>
 /// <param name="pwdSize"></param>
 RC4API void initializationRC4(int srcSize, int pwdSize);
 
 /// <summary>
-/// dispose RC4 source
+/// Dispose RC4 source
 /// </summary>
 /// <returns></returns>
 RC4API void freeRC4Source();
