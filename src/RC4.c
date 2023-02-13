@@ -10,14 +10,13 @@ static unsigned char
 
 void initializationRC4(int srcSize, int pwdSize)
 {
-	int size = srcSize;
-	if (size == 0 || pwdSize == 0)
+	if (srcSize == 0 || pwdSize == 0)
 		return;
 
 	temp = (char *)malloc(128 * sizeof(char));
 	key = (char *)malloc(256 * sizeof(char));
 	sbox = (char *)malloc(256 * sizeof(char));
-	output = (char *)malloc(size * sizeof(char));
+	output = (char *)malloc(srcSize * sizeof(char));
 	IS_INIT = 1;
 }
 
